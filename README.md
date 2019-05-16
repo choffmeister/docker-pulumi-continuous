@@ -25,3 +25,18 @@ docker run --rm \
     choffmeister/pulumi-continuous:latest \
     "yarn install --pure-lockfile && pulumi up --yes"
 ```
+
+```
+docker run --rm \
+    -e GITHUB_REPO=owner/repo \
+    -e GITHUB_USER=username \
+    -e GITHUB_ACCESS_TOKEN=secret \
+    -e PULUMI_STACK=production \
+    -e PULUMI_ACCESS_TOKEN=secret \
+    choffmeister/pulumi-continuous-update \
+    pr \
+    master \
+    "Update docker tags" \
+    service1.dockerTag=1.0 \
+    service2.dockerTag=1.0
+```
