@@ -2,7 +2,7 @@ FROM alpine:3.9
 
 ENV KUBECTL_VERSION="1.14.1"
 ENV HELM_VERSION="2.13.1"
-ENV PULUMI_VERSION="0.17.11"
+ENV PULUMI_VERSION="0.17.12"
 
 RUN apk add --update --no-cache ca-certificates curl
 
