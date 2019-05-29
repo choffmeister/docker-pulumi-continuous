@@ -20,6 +20,7 @@ git checkout -B "${GIT_BRANCH_NEXT}"
 
 # update docker tags
 echo "Updating docker tags..."
+cd "${PULUMI_DIRECTORY:-.}"
 pulumi login
 pulumi stack select ${PULUMI_STACK}
 for ARG in ${@:4}; do
