@@ -1,6 +1,6 @@
 FROM alpine:3.9
 
-ENV PULUMI_VERSION="1.5.2"
+ENV PULUMI_VERSION="2.3.0"
 
 RUN apk add --update --no-cache bash curl git
 
